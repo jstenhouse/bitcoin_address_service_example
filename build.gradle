@@ -1,9 +1,21 @@
 apply plugin: 'java'
-
+apply plugin: 'idea'
+apply plugin: 'application'
 
 repositories {
     mavenCentral()
 }
 
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+mainClassName = 'com.stenhouse.bitcoin.address.BitcoinAddressApplication'
+
 dependencies {
+    compile 'io.dropwizard:dropwizard-core:0.9.1'
+    compile 'org.bitcoinj:bitcoinj-core:0.13.4'
+}
+
+run {
+    args 'server'
 }
