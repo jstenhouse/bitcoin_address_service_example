@@ -14,6 +14,11 @@ import java.util.Random;
  */
 public class BitcoinAddress {
 
+    // See
+    // - https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses
+    // - https://en.bitcoin.it/wiki/Protocol_documentation
+    // - https://en.bitcoin.it/wiki/Base58Check_encoding
+
     @NotEmpty
     private String address;
 
