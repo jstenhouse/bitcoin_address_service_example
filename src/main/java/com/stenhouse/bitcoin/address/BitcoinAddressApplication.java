@@ -1,5 +1,6 @@
 package com.stenhouse.bitcoin.address;
 
+import com.codahale.metrics.health.HealthCheck;
 import com.stenhouse.bitcoin.address.resources.BitcoinAddressResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
@@ -21,6 +22,14 @@ public class BitcoinAddressApplication extends Application<BitcoinAddressConfigu
 
     @Override
     public void run(final BitcoinAddressConfiguration configuration, final Environment environment) throws Exception {
+
+        environment.healthChecks().register("always_healthy", new HealthCheck() {
+            @Override
+            protected Result check() throws Exception {
+                return Result.healthy();
+            }
+        });
+
         environment.jersey().register(new BitcoinAddressResource());
     }
 }

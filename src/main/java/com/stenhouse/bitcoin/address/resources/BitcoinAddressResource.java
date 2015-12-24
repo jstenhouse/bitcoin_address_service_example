@@ -1,5 +1,6 @@
 package com.stenhouse.bitcoin.address.resources;
 
+import com.codahale.metrics.annotation.Timed;
 import com.stenhouse.bitcoin.address.api.BitcoinAddress;
 
 import javax.ws.rs.GET;
@@ -15,6 +16,7 @@ import javax.ws.rs.core.MediaType;
 public class BitcoinAddressResource {
 
     @GET
+    @Timed
     public BitcoinAddress getAddress() {
         return BitcoinAddress.nextRandom();
     }
