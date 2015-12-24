@@ -26,4 +26,6 @@ http://<ip-address>:8080/bitcoin/addresses
 
 ```
 docker run -it --rm -p 8080:8080 -p 8081:8081 bitcoin_address_service:latest /bin/bash
+
+/data/bitcoin_address_service_example/bin/bitcoin_address_service_example server
 ```
