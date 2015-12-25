@@ -1,5 +1,7 @@
 package com.stenhouse.bitcoin.address.resources;
 
+import com.codahale.metrics.annotation.ExceptionMetered;
+import com.codahale.metrics.annotation.Metered;
 import com.codahale.metrics.annotation.Timed;
 import com.stenhouse.bitcoin.address.api.BitcoinAddress;
 
@@ -17,6 +19,8 @@ public class BitcoinAddressResource {
 
     @GET
     @Timed
+    @Metered
+    @ExceptionMetered
     public BitcoinAddress getAddress() {
         return BitcoinAddress.nextRandom();
     }
