@@ -34,7 +34,7 @@ public class BitcoinAddress {
     public String getAddress() {
         return address;
     }
-    
+
     public static BitcoinAddress nextRandom() {
         // should be RIPEMD160 but we'll cheat a little
         final String randomSHA40 = nextRandomSHA40();
