@@ -1,6 +1,6 @@
 ## Bitcoin Address Service Example
 
-An excuse to play around with [Dropwizard](http://www.dropwizard.io/) and [Docker](https://www.docker.com/) among other things.
+An excuse to play around with [Dropwizard](http://www.dropwizard.io/) and [Docker](https://www.docker.com/) among [other things](https://github.com/jstenhouse/docker_examples/tree/master/bitcoin-address-playground).
 
 ### Building
 
