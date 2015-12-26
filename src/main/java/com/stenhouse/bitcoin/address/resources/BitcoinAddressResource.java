@@ -19,7 +19,6 @@ public class BitcoinAddressResource {
 
     @GET
     @Timed
-    @Metered
     @ExceptionMetered
     public BitcoinAddress getAddress() {
         return BitcoinAddress.nextRandom();

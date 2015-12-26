@@ -13,6 +13,8 @@ mainClassName = 'com.stenhouse.bitcoin.address.BitcoinAddressApplication'
 
 dependencies {
     compile 'io.dropwizard:dropwizard-core:0.9.1'
+    compile 'io.dropwizard:dropwizard-metrics-graphite:0.9.1'
+
     compile 'org.bitcoinj:bitcoinj-core:0.13.4'
     compile 'commons-codec:commons-codec:1.10'
 }

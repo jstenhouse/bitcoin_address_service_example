@@ -1,0 +1,6 @@
+metrics:
+  reporters:
+    - type: graphite
+      host: ${GRAPHITE_PORT_2003_TCP_ADDR} # must be provided by docker link
+      port: 2003
+      frequency: 10 seconds

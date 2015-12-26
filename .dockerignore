@@ -1,2 +1,3 @@
 *
-!build/distributions/*.tar
+!build/distributions/bitcoin_address_service_example.tar
+!config/bitcoin_address_service.yml

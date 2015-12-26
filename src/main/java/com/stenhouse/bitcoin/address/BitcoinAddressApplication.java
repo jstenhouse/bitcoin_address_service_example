@@ -3,6 +3,8 @@ package com.stenhouse.bitcoin.address;
 import com.codahale.metrics.health.HealthCheck;
 import com.stenhouse.bitcoin.address.resources.BitcoinAddressResource;
 import io.dropwizard.Application;
+import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
+import io.dropwizard.configuration.SubstitutingSourceProvider;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
@@ -17,7 +19,12 @@ public class BitcoinAddressApplication extends Application<BitcoinAddressConfigu
 
     @Override
     public void initialize(final Bootstrap<BitcoinAddressConfiguration> bootstrap) {
-
+        // Enable variable substitution with environment variables
+        bootstrap.setConfigurationSourceProvider(
+                new SubstitutingSourceProvider(bootstrap.getConfigurationSourceProvider(),
+                        new EnvironmentVariableSubstitutor(false)
+                )
+        );
     }
 
     @Override
