@@ -3,7 +3,7 @@ apply plugin: 'idea'
 apply plugin: 'application'
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 sourceCompatibility = '1.8'
@@ -19,6 +19,7 @@ dependencies {
     compile "io.dropwizard:dropwizard-core:$dropwizardVersion"
     compile "io.dropwizard:dropwizard-metrics-graphite:$dropwizardVersion"
     compile "io.dropwizard:dropwizard-metrics-ganglia:$dropwizardVersion"
+    compile 'net.dehora.dropwizard:dropwizard-statsd:0.8.1'
 
     compile 'org.bitcoinj:bitcoinj-core:0.13.4'
     compile 'commons-codec:commons-codec:1.10'

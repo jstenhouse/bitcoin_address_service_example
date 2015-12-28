@@ -7,3 +7,6 @@ metrics:
     - type: ganglia
       host: ${GANGLIA_PORT_8649_UDP_ADDR} # must be provided by docker link
       port: 8649
+    - type: statsd
+      host: ${GRAPHITE_PORT_8125_UDP_ADDR} # must be provided by docker link
+      port: 8125
